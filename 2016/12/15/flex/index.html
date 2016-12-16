@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="css3  flexBox," />
 
 
 
@@ -84,15 +84,44 @@
 
 
 
-<meta name="description" content="To The Happy Few">
-<meta property="og:type" content="website">
-<meta property="og:title" content="jelly">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="弹性盒子是 CSS3 的一种新的布局模式。
+
+CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的子元素进行排列、对齐和分配空白空间。
+
+更全面的具体属性和参数介绍参见W3C School
+本文主要记录一些经常用到的参数，以及想办法记住这">
+<meta property="og:type" content="article">
+<meta property="og:title" content="弹性盒模型简介">
+<meta property="og:url" content="http://yoursite.com/2016/12/15/flex/index.html">
 <meta property="og:site_name" content="jelly">
-<meta property="og:description" content="To The Happy Few">
+<meta property="og:description" content="弹性盒子是 CSS3 的一种新的布局模式。
+
+CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的子元素进行排列、对齐和分配空白空间。
+
+更全面的具体属性和参数介绍参见W3C School
+本文主要记录一些经常用到的参数，以及想办法记住这">
+<meta property="og:image" content="http://yoursite.com/../images/kuma1.jpg">
+<meta property="og:image" content="http://yoursite.com/../images/flex-1.png">
+<meta property="og:image" content="http://yoursite.com/../images/flex-2.png">
+<meta property="og:image" content="http://yoursite.com/../images/flex-3.png">
+<meta property="og:image" content="http://yoursite.com/../images/flex-1.png">
+<meta property="og:image" content="http://yoursite.com/../images/flex-4.png">
+<meta property="og:image" content="http://yoursite.com/../images/flex-5.png">
+<meta property="og:image" content="http://yoursite.com/../images/flex-6.png">
+<meta property="og:image" content="http://yoursite.com/../images/flex-7.png">
+<meta property="og:image" content="http://yoursite.com/../images/flex-8.png">
+<meta property="og:image" content="http://yoursite.com/../images/flex-9.png">
+<meta property="og:image" content="http://yoursite.com/../images/flex-10.png">
+<meta property="og:updated_time" content="2016-12-16T12:39:00.554Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jelly">
-<meta name="twitter:description" content="To The Happy Few">
+<meta name="twitter:title" content="弹性盒模型简介">
+<meta name="twitter:description" content="弹性盒子是 CSS3 的一种新的布局模式。
+
+CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的子元素进行排列、对齐和分配空白空间。
+
+更全面的具体属性和参数介绍参见W3C School
+本文主要记录一些经常用到的参数，以及想办法记住这">
+<meta name="twitter:image" content="http://yoursite.com/../images/kuma1.jpg">
 
 
 
@@ -120,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/15/flex/"/>
 
 
 
 
 
-  <title> jelly </title>
+  <title> 弹性盒模型简介 | jelly </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -147,9 +176,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -228,9 +255,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -263,10 +290,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/12/15/flex/" itemprop="url">
-                  弹性盒模型简介
-                </a>
+                弹性盒模型简介
               
             
           </h1>
@@ -315,9 +339,7 @@
       
 
       
-        
-          
-            <p>弹性盒子是 CSS3 的一种新的布局模式。</p>
+        <p>弹性盒子是 CSS3 的一种新的布局模式。</p>
 <blockquote>
 <p>CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。<br>引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的子元素进行排列、对齐和分配空白空间。</p>
 </blockquote>
@@ -385,292 +407,62 @@
 <li>stretch 拉伸<br><img src="../images/flex-10.png" alt="img"></li>
 </ul>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/15/img/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Jelly">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/uploads/avatar.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="jelly">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="jelly" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/15/img/" itemprop="url">
-                  css图片间距过宽问题
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-15T19:13:42+08:00">
-                2016-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/css3-flexBox/" rel="tag"># css3  flexBox</a>
           
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>今天在做网页的动态效果时，遇见一个图片间距过宽问题。</p>
-<p><img src="../images/spaceImg_01.png" alt="img"></p>
-<p>好好一个盾牌变成分裂的地砖了….</p>
-<p>之后明白是因为代码中的换行字符硬生生把这个缝撑开了</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"shield"</span>&gt;</div><div class="line">           &lt;img src="./images/shield_1.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_2.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_3.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_4.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_5.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_6.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_7.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_8.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_9.png" alt=""/&gt;</div><div class="line">       &lt;/div&gt;</div></pre></td></tr></table></figure>
-<p>搞清楚了为什么，之后就是怎么解决它。</p>
-<p>一般来讲，有三种方法</p>
-<h3 id="将元素改为块元素"><a href="#将元素改为块元素" class="headerlink" title="将元素改为块元素"></a>将元素改为块元素</h3><p>display：block</p>
-<h3 id="将元素浮动"><a href="#将元素浮动" class="headerlink" title="将元素浮动"></a>将元素浮动</h3><p>float：left</p>
-<h3 id="将font-size设为0"><a href="#将font-size设为0" class="headerlink" title="将font-size设为0"></a>将font-size设为0</h3><p>这个具体为啥我也没整明白，只是看到了就记下来。事实证明，他也是好用的。</p>
-<p>不过css嘛` 总是有一些逻辑上解释不出来但是确实实际可行的方法。</p>
-<p>以上三种方法实测都是可以的，只是前两种需要在css文件中单独对图片进行设置，而第三种方法只需要在父元素上增加一行代码就好了。</p>
-<p>最后，地砖变成盾牌了~</p>
-<p><img src="../images/spaceImg_02.png" alt="img"></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/11/hello-world/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Jelly">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/uploads/avatar.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="jelly">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="jelly" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/12/15/img/" rel="next" title="css图片间距过宽问题">
+                <i class="fa fa-chevron-left"></i> css图片间距过宽问题
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/12/11/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-11T18:53:25+08:00">
-                2016-12-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -678,6 +470,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -697,8 +493,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -744,6 +549,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#伸缩布局介绍"><span class="nav-number">1.</span> <span class="nav-text">伸缩布局介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新概念引入"><span class="nav-number">2.</span> <span class="nav-text">新概念引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#必要元素："><span class="nav-number">3.</span> <span class="nav-text">必要元素：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各属性详解"><span class="nav-number">4.</span> <span class="nav-text">各属性详解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#调整主轴方向"><span class="nav-number">4.1.</span> <span class="nav-text">调整主轴方向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#调整主轴对齐"><span class="nav-number">4.2.</span> <span class="nav-text">调整主轴对齐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#调整侧轴对齐"><span class="nav-number">4.3.</span> <span class="nav-text">调整侧轴对齐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#控制是否换行"><span class="nav-number">4.4.</span> <span class="nav-text">控制是否换行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#堆栈（由flex-wrap产生的独立行）对齐"><span class="nav-number">4.5.</span> <span class="nav-text">堆栈（由flex-wrap产生的独立行）对齐</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
@@ -842,6 +663,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
