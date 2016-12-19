@@ -91,7 +91,7 @@ CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应�
 更全面的具体属性和参数介绍参见W3C School
 本文主要记录一些经常用到的参数，以及想办法记住这">
 <meta property="og:type" content="article">
-<meta property="og:title" content="弹性盒模型简介">
+<meta property="og:title" content="弹性盒模型简介(一)">
 <meta property="og:url" content="http://yoursite.com/2016/12/15/flex/index.html">
 <meta property="og:site_name" content="jelly">
 <meta property="og:description" content="弹性盒子是 CSS3 的一种新的布局模式。
@@ -112,9 +112,10 @@ CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应�
 <meta property="og:image" content="http://yoursite.com/../images/flex-8.png">
 <meta property="og:image" content="http://yoursite.com/../images/flex-9.png">
 <meta property="og:image" content="http://yoursite.com/../images/flex-10.png">
-<meta property="og:updated_time" content="2016-12-16T12:39:00.554Z">
+<meta property="og:image" content="http://yoursite.com/../images/flex-11.png">
+<meta property="og:updated_time" content="2016-12-19T02:51:20.779Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="弹性盒模型简介">
+<meta name="twitter:title" content="弹性盒模型简介(一)">
 <meta name="twitter:description" content="弹性盒子是 CSS3 的一种新的布局模式。
 
 CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的子元素进行排列、对齐和分配空白空间。
@@ -155,7 +156,7 @@ CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应�
 
 
 
-  <title> 弹性盒模型简介 | jelly </title>
+  <title> 弹性盒模型简介(一) | jelly </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -290,7 +291,7 @@ CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应�
             
             
               
-                弹性盒模型简介
+                弹性盒模型简介(一)
               
             
           </h1>
@@ -406,6 +407,14 @@ CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应�
 <li>space-between 两端对齐<br><img src="../images/flex-9.png" alt="img"></li>
 <li>stretch 拉伸<br><img src="../images/flex-10.png" alt="img"></li>
 </ul>
+<h3 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow"></a>flex-flow</h3><p> 是flex-direction（调整主轴方向）和flex-wrap（控制换行）的简写形式</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">setion ul&#123;</div><div class="line"></div><div class="line"><span class="comment">// flex-direction:cloumn;</span></div><div class="line"><span class="comment">// flex-wrap:wrap;</span></div><div class="line"></div><div class="line">   flex-flow: cloumn wrap;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h3><p>剩余空间按比例分配宽度</p>
+<p>前面所有的属性都是对父盒子之后，子元素会有相应的变化，flex是专门针对子元素的属性</p>
+<p>虽然flex后面有三个参数，但日常使用中，第一个即可满足需求</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">.flex121 li:nth-child(<span class="number">1</span>)&#123;</div><div class="line">    <span class="attr">flex</span>:<span class="number">1</span>;</div><div class="line">&#125;</div><div class="line">.flex121 li:nth-child(<span class="number">2</span>)&#123;</div><div class="line">    <span class="attr">flex</span>:<span class="number">2</span>;</div><div class="line">&#125;</div><div class="line">.flex121 li:nth-child(<span class="number">3</span>)&#123;</div><div class="line">    <span class="attr">flex</span>:<span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>代码效果如图所示<br><img src="../images/flex-11.png" alt="img"></p>
+<p>注：如果子元素设置的宽度 同时设置了flex属性的话 宽度属性不起作用</p>
 
       
     </div>
@@ -447,6 +456,10 @@ CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应�
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/19/flex2/" rel="prev" title="���Ժ�ģ�ͼ���(��)">
+                ���Ժ�ģ�ͼ���(��) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -514,7 +527,7 @@ CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -559,7 +572,7 @@ CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#伸缩布局介绍"><span class="nav-number">1.</span> <span class="nav-text">伸缩布局介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新概念引入"><span class="nav-number">2.</span> <span class="nav-text">新概念引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#必要元素："><span class="nav-number">3.</span> <span class="nav-text">必要元素：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各属性详解"><span class="nav-number">4.</span> <span class="nav-text">各属性详解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#调整主轴方向"><span class="nav-number">4.1.</span> <span class="nav-text">调整主轴方向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#调整主轴对齐"><span class="nav-number">4.2.</span> <span class="nav-text">调整主轴对齐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#调整侧轴对齐"><span class="nav-number">4.3.</span> <span class="nav-text">调整侧轴对齐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#控制是否换行"><span class="nav-number">4.4.</span> <span class="nav-text">控制是否换行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#堆栈（由flex-wrap产生的独立行）对齐"><span class="nav-number">4.5.</span> <span class="nav-text">堆栈（由flex-wrap产生的独立行）对齐</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#伸缩布局介绍"><span class="nav-number">1.</span> <span class="nav-text">伸缩布局介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新概念引入"><span class="nav-number">2.</span> <span class="nav-text">新概念引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#必要元素："><span class="nav-number">3.</span> <span class="nav-text">必要元素：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各属性详解"><span class="nav-number">4.</span> <span class="nav-text">各属性详解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#调整主轴方向"><span class="nav-number">4.1.</span> <span class="nav-text">调整主轴方向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#调整主轴对齐"><span class="nav-number">4.2.</span> <span class="nav-text">调整主轴对齐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#调整侧轴对齐"><span class="nav-number">4.3.</span> <span class="nav-text">调整侧轴对齐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#控制是否换行"><span class="nav-number">4.4.</span> <span class="nav-text">控制是否换行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#堆栈（由flex-wrap产生的独立行）对齐"><span class="nav-number">4.5.</span> <span class="nav-text">堆栈（由flex-wrap产生的独立行）对齐</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-flow"><span class="nav-number">5.</span> <span class="nav-text">flex-flow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex"><span class="nav-number">6.</span> <span class="nav-text">flex</span></a></li></ol></div>
             
 
           </div>
