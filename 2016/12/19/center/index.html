@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="css," />
+  <meta name="keywords" content="方法总结," />
 
 
 
@@ -84,31 +84,31 @@
 
 
 
-<meta name="description" content="今天在做网页的动态效果时，遇见一个图片间距过宽问题。
-
-好好一个盾牌变成分裂的地砖了….
-之后明白是因为代码中的换行字符硬生生把这个缝撑开了
-123456789101112&amp;lt;div class=&quot;shield&quot;&amp;gt;           &amp;lt;img src=&quot;./images/shield_1.png&quot; alt=&quot;&quot;/&amp;gt;           &amp;lt;img src=&quot;./imag">
+<meta name="description" content="方法一 使用flex父盒子： display：flex；
+子元素： margin：auto；
+随意改变宽高，一直居中。较方便
+方法二  使用定位父盒子： position：relative；
+子元素： position： absolute；        left：50%；        top：50%；        margin: -高度的一半 0 0 -宽度的一半；
+改变宽高子元素便不再居中">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css图片间距过宽问题">
-<meta property="og:url" content="http://yoursite.com/2016/12/15/img/index.html">
+<meta property="og:title" content="各种居中方式">
+<meta property="og:url" content="http://yoursite.com/2016/12/19/center/index.html">
 <meta property="og:site_name" content="jelly">
-<meta property="og:description" content="今天在做网页的动态效果时，遇见一个图片间距过宽问题。
-
-好好一个盾牌变成分裂的地砖了….
-之后明白是因为代码中的换行字符硬生生把这个缝撑开了
-123456789101112&amp;lt;div class=&quot;shield&quot;&amp;gt;           &amp;lt;img src=&quot;./images/shield_1.png&quot; alt=&quot;&quot;/&amp;gt;           &amp;lt;img src=&quot;./imag">
-<meta property="og:image" content="http://yoursite.com/../images/spaceImg_01.png">
-<meta property="og:image" content="http://yoursite.com/../images/spaceImg_02.png">
-<meta property="og:updated_time" content="2016-12-15T12:05:56.610Z">
+<meta property="og:description" content="方法一 使用flex父盒子： display：flex；
+子元素： margin：auto；
+随意改变宽高，一直居中。较方便
+方法二  使用定位父盒子： position：relative；
+子元素： position： absolute；        left：50%；        top：50%；        margin: -高度的一半 0 0 -宽度的一半；
+改变宽高子元素便不再居中">
+<meta property="og:updated_time" content="2016-12-19T12:17:31.793Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css图片间距过宽问题">
-<meta name="twitter:description" content="今天在做网页的动态效果时，遇见一个图片间距过宽问题。
-
-好好一个盾牌变成分裂的地砖了….
-之后明白是因为代码中的换行字符硬生生把这个缝撑开了
-123456789101112&amp;lt;div class=&quot;shield&quot;&amp;gt;           &amp;lt;img src=&quot;./images/shield_1.png&quot; alt=&quot;&quot;/&amp;gt;           &amp;lt;img src=&quot;./imag">
-<meta name="twitter:image" content="http://yoursite.com/../images/spaceImg_01.png">
+<meta name="twitter:title" content="各种居中方式">
+<meta name="twitter:description" content="方法一 使用flex父盒子： display：flex；
+子元素： margin：auto；
+随意改变宽高，一直居中。较方便
+方法二  使用定位父盒子： position：relative；
+子元素： position： absolute；        left：50%；        top：50%；        margin: -高度的一半 0 0 -宽度的一半；
+改变宽高子元素便不再居中">
 
 
 
@@ -136,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/12/15/img/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/19/center/"/>
 
 
 
 
 
-  <title> css图片间距过宽问题 | jelly </title>
+  <title> 各种居中方式 | jelly </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -253,7 +253,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/15/img/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/19/center/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Jelly">
@@ -277,7 +277,7 @@
             
             
               
-                css图片间距过宽问题
+                各种居中方式
               
             
           </h1>
@@ -290,8 +290,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-15T19:13:42+08:00">
-                2016-12-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-19T15:16:37+08:00">
+                2016-12-19
               </time>
             
 
@@ -326,20 +326,32 @@
       
 
       
-        <p>今天在做网页的动态效果时，遇见一个图片间距过宽问题。</p>
-<p><img src="../images/spaceImg_01.png" alt="img"></p>
-<p>好好一个盾牌变成分裂的地砖了….</p>
-<p>之后明白是因为代码中的换行字符硬生生把这个缝撑开了</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"shield"</span>&gt;</div><div class="line">           &lt;img src="./images/shield_1.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_2.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_3.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_4.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_5.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_6.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_7.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_8.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_9.png" alt=""/&gt;</div><div class="line">       &lt;/div&gt;</div></pre></td></tr></table></figure>
-<p>搞清楚了为什么，之后就是怎么解决它。</p>
-<p>一般来讲，有三种方法</p>
-<h3 id="将元素改为块元素"><a href="#将元素改为块元素" class="headerlink" title="将元素改为块元素"></a>将元素改为块元素</h3><p>display：block</p>
-<h3 id="将元素浮动"><a href="#将元素浮动" class="headerlink" title="将元素浮动"></a>将元素浮动</h3><p>float：left</p>
-<h3 id="将font-size设为0"><a href="#将font-size设为0" class="headerlink" title="将font-size设为0"></a>将font-size设为0</h3><p>这个具体为啥我也没整明白，只是看到了就记下来。事实证明，他也是好用的。</p>
-<p>不过css嘛` 总是有一些逻辑上解释不出来但是确实实际可行的方法。</p>
-<p>以上三种方法实测都是可以的，只是前两种需要在css文件中单独对图片进行设置，而第三种方法只需要在父元素上增加一行代码就好了。</p>
-<p>最后，地砖变成盾牌了~</p>
-<p><img src="../images/spaceImg_02.png" alt="img"></p>
+        <h2 id="方法一-使用flex"><a href="#方法一-使用flex" class="headerlink" title="方法一 使用flex"></a>方法一 使用flex</h2><p>父盒子： display：flex；</p>
+<p>子元素： margin：auto；</p>
+<p>随意改变宽高，一直居中。较方便</p>
+<h2 id="方法二-使用定位"><a href="#方法二-使用定位" class="headerlink" title="方法二  使用定位"></a>方法二  使用定位</h2><p>父盒子： position：relative；</p>
+<p>子元素： position： absolute；<br>        left：50%；<br>        top：50%；<br>        margin: -高度的一半 0 0 -宽度的一半；</p>
+<p>改变宽高子元素便不再居中，有局限性</p>
+<p>改进方案： 将margin用transform替代</p>
+<pre><code>transform： translate（-50% ， -50%）；
+</code></pre><p>改进之后，居中的位置不受元素的宽高所影响</p>
+<h2 id="方法三-vertical-align"><a href="#方法三-vertical-align" class="headerlink" title="方法三 vertical-align"></a>方法三 vertical-align</h2><p>这一方法常针对图片居中使用</p>
+<p> 初始结构如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"thumb"</span>&gt;</div><div class="line">    &lt;img src="图片链接" &gt;</div><div class="line">&lt;div&gt;</div></pre></td></tr></table></figure></p>
+<p> 给盒子设置好样式之后开始添加属性，实现水平和垂直的居中</p>
+<ol>
+<li>父盒子添加text-align：center</li>
+<li><p>给img加一个兄弟元素span</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"thumb"</span>&gt;</div><div class="line">    &lt;img src="图片链接" &gt;</div><div class="line">    &lt;span&gt;&lt;/span&gt;</div><div class="line">&lt;div&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>span样式设置：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.thumb span&#123;</div><div class="line">   display：inline-block；</div><div class="line">   height：<span class="number">100</span>%；</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>给img设置样式：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"> .thumb span&#123;</div><div class="line">    vertical-align:middle;</div><div class="line"> &#125;</div><div class="line"></div><div class="line">此时无论怎样改变图片大小，图片一直是水平垂直居中的</div><div class="line"></div><div class="line">##### 原理解释：vertical-align，是相对于兄弟元素的中线做垂直对齐，只有img和外面的盒子的时候是无法让img居中的</div><div class="line"></div><div class="line">#### 不想用span也可以用伪类代替</div><div class="line"></div><div class="line">```javascript</div><div class="line"></div><div class="line">.thumb:after&#123;</div><div class="line">    content:'';</div><div class="line">    display:inline-block;</div><div class="line">    height:100%;</div><div class="line">    vertical-align:middle;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="第四种：使用div模拟表格结构"><a href="#第四种：使用div模拟表格结构" class="headerlink" title="第四种：使用div模拟表格结构"></a>第四种：使用div模拟表格结构</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"table"</span>&gt;</div><div class="line">    &lt;div class="td"&gt;</div><div class="line">        &lt;img src="图片链接" alt=""&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>在css设置中 给 <code>.table</code> 添加 <code>display:table</code>;<br>           给 <code>.td</code> 添加 <code>display:table-cell; vertical-align:middle;text-align:center</code></p>
 
       
     </div>
@@ -363,7 +375,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/css/" rel="tag"># css</a>
+            <a href="/tags/方法总结/" rel="tag"># 方法总结</a>
           
         </div>
       
@@ -372,8 +384,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/11/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/12/19/animation/" rel="next" title="各种动画效果的实现">
+                <i class="fa fa-chevron-left"></i> 各种动画效果的实现
               </a>
             
           </div>
@@ -381,10 +393,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/15/flex/" rel="prev" title="弹性盒模型简介">
-                弹性盒模型简介 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -497,7 +505,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#将元素改为块元素"><span class="nav-number">1.</span> <span class="nav-text">将元素改为块元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将元素浮动"><span class="nav-number">2.</span> <span class="nav-text">将元素浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将font-size设为0"><span class="nav-number">3.</span> <span class="nav-text">将font-size设为0</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一-使用flex"><span class="nav-number">1.</span> <span class="nav-text">方法一 使用flex</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二-使用定位"><span class="nav-number">2.</span> <span class="nav-text">方法二  使用定位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法三-vertical-align"><span class="nav-number">3.</span> <span class="nav-text">方法三 vertical-align</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四种：使用div模拟表格结构"><span class="nav-number">4.</span> <span class="nav-text">第四种：使用div模拟表格结构</span></a></li></ol></div>
             
 
           </div>
