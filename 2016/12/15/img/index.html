@@ -84,31 +84,19 @@
 
 
 
-<meta name="description" content="今天在做网页的动态效果时，遇见一个图片间距过宽问题。
-
-好好一个盾牌变成分裂的地砖了….
-之后明白是因为代码中的换行字符硬生生把这个缝撑开了
-123456789101112&amp;lt;div class=&quot;shield&quot;&amp;gt;           &amp;lt;img src=&quot;./images/shield_1.png&quot; alt=&quot;&quot;/&amp;gt;           &amp;lt;img src=&quot;./imag">
+<meta name="description" content="&amp;#x4ECA;&amp;#x5929;&amp;#x5728;&amp;#x505A;&amp;#x7F51;&amp;#x9875;&amp;#x7684;&amp;#x52A8;&amp;#x6001;&amp;#x6548;&amp;#x679C;&amp;#x65F6;&amp;#xFF0C;&amp;#x9047;&amp;#x89C1;&amp;#x4E00;&amp;#x4E2A;&amp;#x56FE;&amp;#x7247;&amp;#x95F4;&amp;#x8DDD;&amp;#x8FC7;&amp;#x5BBD;&amp;#x95EE;&amp;#x9898;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css图片间距过宽问题">
 <meta property="og:url" content="http://yoursite.com/2016/12/15/img/index.html">
 <meta property="og:site_name" content="jelly">
-<meta property="og:description" content="今天在做网页的动态效果时，遇见一个图片间距过宽问题。
-
-好好一个盾牌变成分裂的地砖了….
-之后明白是因为代码中的换行字符硬生生把这个缝撑开了
-123456789101112&amp;lt;div class=&quot;shield&quot;&amp;gt;           &amp;lt;img src=&quot;./images/shield_1.png&quot; alt=&quot;&quot;/&amp;gt;           &amp;lt;img src=&quot;./imag">
-<meta property="og:image" content="http://yoursite.com/../images/spaceImg_01.png">
-<meta property="og:image" content="http://yoursite.com/../images/spaceImg_02.png">
+<meta property="og:description" content="&amp;#x4ECA;&amp;#x5929;&amp;#x5728;&amp;#x505A;&amp;#x7F51;&amp;#x9875;&amp;#x7684;&amp;#x52A8;&amp;#x6001;&amp;#x6548;&amp;#x679C;&amp;#x65F6;&amp;#xFF0C;&amp;#x9047;&amp;#x89C1;&amp;#x4E00;&amp;#x4E2A;&amp;#x56FE;&amp;#x7247;&amp;#x95F4;&amp;#x8DDD;&amp;#x8FC7;&amp;#x5BBD;&amp;#x95EE;&amp;#x9898;">
+<meta property="og:image" content="http://yoursite.com/2016/12/15/img/../images/spaceImg_01.png">
+<meta property="og:image" content="http://yoursite.com/2016/12/15/img/../images/spaceImg_02.png">
 <meta property="og:updated_time" content="2016-12-15T12:05:56.610Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css图片间距过宽问题">
-<meta name="twitter:description" content="今天在做网页的动态效果时，遇见一个图片间距过宽问题。
-
-好好一个盾牌变成分裂的地砖了….
-之后明白是因为代码中的换行字符硬生生把这个缝撑开了
-123456789101112&amp;lt;div class=&quot;shield&quot;&amp;gt;           &amp;lt;img src=&quot;./images/shield_1.png&quot; alt=&quot;&quot;/&amp;gt;           &amp;lt;img src=&quot;./imag">
-<meta name="twitter:image" content="http://yoursite.com/../images/spaceImg_01.png">
+<meta name="twitter:description" content="&amp;#x4ECA;&amp;#x5929;&amp;#x5728;&amp;#x505A;&amp;#x7F51;&amp;#x9875;&amp;#x7684;&amp;#x52A8;&amp;#x6001;&amp;#x6548;&amp;#x679C;&amp;#x65F6;&amp;#xFF0C;&amp;#x9047;&amp;#x89C1;&amp;#x4E00;&amp;#x4E2A;&amp;#x56FE;&amp;#x7247;&amp;#x95F4;&amp;#x8DDD;&amp;#x8FC7;&amp;#x5BBD;&amp;#x95EE;&amp;#x9898;">
+<meta name="twitter:image" content="http://yoursite.com/2016/12/15/img/../images/spaceImg_01.png">
 
 
 
@@ -326,20 +314,20 @@
       
 
       
-        <p>今天在做网页的动态效果时，遇见一个图片间距过宽问题。</p>
-<p><img src="../images/spaceImg_01.png" alt="img"></p>
-<p>好好一个盾牌变成分裂的地砖了….</p>
-<p>之后明白是因为代码中的换行字符硬生生把这个缝撑开了</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"shield"</span>&gt;</div><div class="line">           &lt;img src="./images/shield_1.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_2.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_3.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_4.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_5.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_6.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_7.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_8.png" alt=""/&gt;</div><div class="line">           &lt;img src="./images/shield_9.png" alt=""/&gt;</div><div class="line">       &lt;/div&gt;</div></pre></td></tr></table></figure>
-<p>搞清楚了为什么，之后就是怎么解决它。</p>
-<p>一般来讲，有三种方法</p>
-<h3 id="将元素改为块元素"><a href="#将元素改为块元素" class="headerlink" title="将元素改为块元素"></a>将元素改为块元素</h3><p>display：block</p>
-<h3 id="将元素浮动"><a href="#将元素浮动" class="headerlink" title="将元素浮动"></a>将元素浮动</h3><p>float：left</p>
-<h3 id="将font-size设为0"><a href="#将font-size设为0" class="headerlink" title="将font-size设为0"></a>将font-size设为0</h3><p>这个具体为啥我也没整明白，只是看到了就记下来。事实证明，他也是好用的。</p>
-<p>不过css嘛` 总是有一些逻辑上解释不出来但是确实实际可行的方法。</p>
-<p>以上三种方法实测都是可以的，只是前两种需要在css文件中单独对图片进行设置，而第三种方法只需要在父元素上增加一行代码就好了。</p>
-<p>最后，地砖变成盾牌了~</p>
-<p><img src="../images/spaceImg_02.png" alt="img"></p>
+        <p>&#x4ECA;&#x5929;&#x5728;&#x505A;&#x7F51;&#x9875;&#x7684;&#x52A8;&#x6001;&#x6548;&#x679C;&#x65F6;&#xFF0C;&#x9047;&#x89C1;&#x4E00;&#x4E2A;&#x56FE;&#x7247;&#x95F4;&#x8DDD;&#x8FC7;&#x5BBD;&#x95EE;&#x9898;&#x3002;</p>
+<p><img src="/2016/12/15/img/../images/spaceImg_01.png" alt="img"></p>
+<p>&#x597D;&#x597D;&#x4E00;&#x4E2A;&#x76FE;&#x724C;&#x53D8;&#x6210;&#x5206;&#x88C2;&#x7684;&#x5730;&#x7816;&#x4E86;&#x2026;.</p>
+<p>&#x4E4B;&#x540E;&#x660E;&#x767D;&#x662F;&#x56E0;&#x4E3A;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x6362;&#x884C;&#x5B57;&#x7B26;&#x786C;&#x751F;&#x751F;&#x628A;&#x8FD9;&#x4E2A;&#x7F1D;&#x6491;&#x5F00;&#x4E86;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;shield&quot;</span>&gt;</div><div class="line">           &lt;img src=&quot;./images/shield_1.png&quot; alt=&quot;&quot;/&gt;</div><div class="line">           &lt;img src=&quot;./images/shield_2.png&quot; alt=&quot;&quot;/&gt;</div><div class="line">           &lt;img src=&quot;./images/shield_3.png&quot; alt=&quot;&quot;/&gt;</div><div class="line">           &lt;img src=&quot;./images/shield_4.png&quot; alt=&quot;&quot;/&gt;</div><div class="line">           &lt;img src=&quot;./images/shield_5.png&quot; alt=&quot;&quot;/&gt;</div><div class="line">           &lt;img src=&quot;./images/shield_6.png&quot; alt=&quot;&quot;/&gt;</div><div class="line">           &lt;img src=&quot;./images/shield_7.png&quot; alt=&quot;&quot;/&gt;</div><div class="line">           &lt;img src=&quot;./images/shield_8.png&quot; alt=&quot;&quot;/&gt;</div><div class="line">           &lt;img src=&quot;./images/shield_9.png&quot; alt=&quot;&quot;/&gt;</div><div class="line">       &lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>&#x641E;&#x6E05;&#x695A;&#x4E86;&#x4E3A;&#x4EC0;&#x4E48;&#xFF0C;&#x4E4B;&#x540E;&#x5C31;&#x662F;&#x600E;&#x4E48;&#x89E3;&#x51B3;&#x5B83;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BB2;&#xFF0C;&#x6709;&#x4E09;&#x79CD;&#x65B9;&#x6CD5;</p>
+<h3 id="&#x5C06;&#x5143;&#x7D20;&#x6539;&#x4E3A;&#x5757;&#x5143;&#x7D20;"><a href="#&#x5C06;&#x5143;&#x7D20;&#x6539;&#x4E3A;&#x5757;&#x5143;&#x7D20;" class="headerlink" title="&#x5C06;&#x5143;&#x7D20;&#x6539;&#x4E3A;&#x5757;&#x5143;&#x7D20;"></a>&#x5C06;&#x5143;&#x7D20;&#x6539;&#x4E3A;&#x5757;&#x5143;&#x7D20;</h3><p>display&#xFF1A;block</p>
+<h3 id="&#x5C06;&#x5143;&#x7D20;&#x6D6E;&#x52A8;"><a href="#&#x5C06;&#x5143;&#x7D20;&#x6D6E;&#x52A8;" class="headerlink" title="&#x5C06;&#x5143;&#x7D20;&#x6D6E;&#x52A8;"></a>&#x5C06;&#x5143;&#x7D20;&#x6D6E;&#x52A8;</h3><p>float&#xFF1A;left</p>
+<h3 id="&#x5C06;font-size&#x8BBE;&#x4E3A;0"><a href="#&#x5C06;font-size&#x8BBE;&#x4E3A;0" class="headerlink" title="&#x5C06;font-size&#x8BBE;&#x4E3A;0"></a>&#x5C06;font-size&#x8BBE;&#x4E3A;0</h3><p>&#x8FD9;&#x4E2A;&#x5177;&#x4F53;&#x4E3A;&#x5565;&#x6211;&#x4E5F;&#x6CA1;&#x6574;&#x660E;&#x767D;&#xFF0C;&#x53EA;&#x662F;&#x770B;&#x5230;&#x4E86;&#x5C31;&#x8BB0;&#x4E0B;&#x6765;&#x3002;&#x4E8B;&#x5B9E;&#x8BC1;&#x660E;&#xFF0C;&#x4ED6;&#x4E5F;&#x662F;&#x597D;&#x7528;&#x7684;&#x3002;</p>
+<p>&#x4E0D;&#x8FC7;css&#x561B;` &#x603B;&#x662F;&#x6709;&#x4E00;&#x4E9B;&#x903B;&#x8F91;&#x4E0A;&#x89E3;&#x91CA;&#x4E0D;&#x51FA;&#x6765;&#x4F46;&#x662F;&#x786E;&#x5B9E;&#x5B9E;&#x9645;&#x53EF;&#x884C;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x4E09;&#x79CD;&#x65B9;&#x6CD5;&#x5B9E;&#x6D4B;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#xFF0C;&#x53EA;&#x662F;&#x524D;&#x4E24;&#x79CD;&#x9700;&#x8981;&#x5728;css&#x6587;&#x4EF6;&#x4E2D;&#x5355;&#x72EC;&#x5BF9;&#x56FE;&#x7247;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#xFF0C;&#x800C;&#x7B2C;&#x4E09;&#x79CD;&#x65B9;&#x6CD5;&#x53EA;&#x9700;&#x8981;&#x5728;&#x7236;&#x5143;&#x7D20;&#x4E0A;&#x589E;&#x52A0;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x5C31;&#x597D;&#x4E86;&#x3002;</p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x5730;&#x7816;&#x53D8;&#x6210;&#x76FE;&#x724C;&#x4E86;~</p>
+<p><img src="/2016/12/15/img/../images/spaceImg_02.png" alt="img"></p>
 
       
     </div>
@@ -452,7 +440,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

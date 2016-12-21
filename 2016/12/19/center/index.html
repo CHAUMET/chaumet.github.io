@@ -84,31 +84,22 @@
 
 
 
-<meta name="description" content="方法一 使用flex父盒子： display：flex；
-子元素： margin：auto；
-随意改变宽高，一直居中。较方便
-方法二  使用定位父盒子： position：relative；
-子元素： position： absolute；        left：50%；        top：50%；        margin: -高度的一半 0 0 -宽度的一半；
-改变宽高子元素便不再居中">
+<meta name="description" content="&amp;#x65B9;&amp;#x6CD5;&amp;#x4E00; &amp;#x4F7F;&amp;#x7528;flex&amp;#x7236;&amp;#x76D2;&amp;#x5B50;&amp;#xFF1A; display&amp;#xFF1A;flex&amp;#xFF1B;
+&amp;#x5B50;&amp;#x5143;&amp;#x7D20;&amp;#xFF1A; margin&amp;#xFF1A;auto&amp;#xFF1B;
+&amp;#x968F;&amp;#x610F;&amp;#x6539;&amp;#x53D8;&amp;#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="各种居中方式">
 <meta property="og:url" content="http://yoursite.com/2016/12/19/center/index.html">
 <meta property="og:site_name" content="jelly">
-<meta property="og:description" content="方法一 使用flex父盒子： display：flex；
-子元素： margin：auto；
-随意改变宽高，一直居中。较方便
-方法二  使用定位父盒子： position：relative；
-子元素： position： absolute；        left：50%；        top：50%；        margin: -高度的一半 0 0 -宽度的一半；
-改变宽高子元素便不再居中">
+<meta property="og:description" content="&amp;#x65B9;&amp;#x6CD5;&amp;#x4E00; &amp;#x4F7F;&amp;#x7528;flex&amp;#x7236;&amp;#x76D2;&amp;#x5B50;&amp;#xFF1A; display&amp;#xFF1A;flex&amp;#xFF1B;
+&amp;#x5B50;&amp;#x5143;&amp;#x7D20;&amp;#xFF1A; margin&amp;#xFF1A;auto&amp;#xFF1B;
+&amp;#x968F;&amp;#x610F;&amp;#x6539;&amp;#x53D8;&amp;#">
 <meta property="og:updated_time" content="2016-12-19T12:25:58.150Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="各种居中方式">
-<meta name="twitter:description" content="方法一 使用flex父盒子： display：flex；
-子元素： margin：auto；
-随意改变宽高，一直居中。较方便
-方法二  使用定位父盒子： position：relative；
-子元素： position： absolute；        left：50%；        top：50%；        margin: -高度的一半 0 0 -宽度的一半；
-改变宽高子元素便不再居中">
+<meta name="twitter:description" content="&amp;#x65B9;&amp;#x6CD5;&amp;#x4E00; &amp;#x4F7F;&amp;#x7528;flex&amp;#x7236;&amp;#x76D2;&amp;#x5B50;&amp;#xFF1A; display&amp;#xFF1A;flex&amp;#xFF1B;
+&amp;#x5B50;&amp;#x5143;&amp;#x7D20;&amp;#xFF1A; margin&amp;#xFF1A;auto&amp;#xFF1B;
+&amp;#x968F;&amp;#x610F;&amp;#x6539;&amp;#x53D8;&amp;#">
 
 
 
@@ -326,34 +317,34 @@
       
 
       
-        <h2 id="方法一-使用flex"><a href="#方法一-使用flex" class="headerlink" title="方法一 使用flex"></a>方法一 使用flex</h2><p>父盒子： display：flex；</p>
-<p>子元素： margin：auto；</p>
-<p>随意改变宽高，一直居中。较方便</p>
-<h2 id="方法二-使用定位"><a href="#方法二-使用定位" class="headerlink" title="方法二  使用定位"></a>方法二  使用定位</h2><p>父盒子： position：relative；</p>
-<p>子元素： position： absolute；<br>        left：50%；<br>        top：50%；<br>        margin: -高度的一半 0 0 -宽度的一半；</p>
-<p>改变宽高子元素便不再居中，有局限性</p>
-<p>改进方案： 将margin用transform替代</p>
-<pre><code>transform： translate（-50% ， -50%）；
-</code></pre><p>改进之后，居中的位置不受元素的宽高所影响</p>
-<h2 id="方法三-vertical-align"><a href="#方法三-vertical-align" class="headerlink" title="方法三 vertical-align"></a>方法三 vertical-align</h2><p>这一方法常针对图片居中使用</p>
-<p> 初始结构如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"thumb"</span>&gt;</div><div class="line">    &lt;img src="图片链接" &gt;</div><div class="line">&lt;div&gt;</div></pre></td></tr></table></figure></p>
-<p> 给盒子设置好样式之后开始添加属性，实现水平和垂直的居中</p>
+        <h2 id="&#x65B9;&#x6CD5;&#x4E00;-&#x4F7F;&#x7528;flex"><a href="#&#x65B9;&#x6CD5;&#x4E00;-&#x4F7F;&#x7528;flex" class="headerlink" title="&#x65B9;&#x6CD5;&#x4E00; &#x4F7F;&#x7528;flex"></a>&#x65B9;&#x6CD5;&#x4E00; &#x4F7F;&#x7528;flex</h2><p>&#x7236;&#x76D2;&#x5B50;&#xFF1A; display&#xFF1A;flex&#xFF1B;</p>
+<p>&#x5B50;&#x5143;&#x7D20;&#xFF1A; margin&#xFF1A;auto&#xFF1B;</p>
+<p>&#x968F;&#x610F;&#x6539;&#x53D8;&#x5BBD;&#x9AD8;&#xFF0C;&#x4E00;&#x76F4;&#x5C45;&#x4E2D;&#x3002;&#x8F83;&#x65B9;&#x4FBF;</p>
+<h2 id="&#x65B9;&#x6CD5;&#x4E8C;-&#x4F7F;&#x7528;&#x5B9A;&#x4F4D;"><a href="#&#x65B9;&#x6CD5;&#x4E8C;-&#x4F7F;&#x7528;&#x5B9A;&#x4F4D;" class="headerlink" title="&#x65B9;&#x6CD5;&#x4E8C;  &#x4F7F;&#x7528;&#x5B9A;&#x4F4D;"></a>&#x65B9;&#x6CD5;&#x4E8C;  &#x4F7F;&#x7528;&#x5B9A;&#x4F4D;</h2><p>&#x7236;&#x76D2;&#x5B50;&#xFF1A; position&#xFF1A;relative&#xFF1B;</p>
+<p>&#x5B50;&#x5143;&#x7D20;&#xFF1A; position&#xFF1A; absolute&#xFF1B;<br>        left&#xFF1A;50%&#xFF1B;<br>        top&#xFF1A;50%&#xFF1B;<br>        margin: -&#x9AD8;&#x5EA6;&#x7684;&#x4E00;&#x534A; 0 0 -&#x5BBD;&#x5EA6;&#x7684;&#x4E00;&#x534A;&#xFF1B;</p>
+<p>&#x6539;&#x53D8;&#x5BBD;&#x9AD8;&#x5B50;&#x5143;&#x7D20;&#x4FBF;&#x4E0D;&#x518D;&#x5C45;&#x4E2D;&#xFF0C;&#x6709;&#x5C40;&#x9650;&#x6027;</p>
+<p>&#x6539;&#x8FDB;&#x65B9;&#x6848;&#xFF1A; &#x5C06;margin&#x7528;transform&#x66FF;&#x4EE3;</p>
+<pre><code>transform&#xFF1A; translate&#xFF08;-50% &#xFF0C; -50%&#xFF09;&#xFF1B;
+</code></pre><p>&#x6539;&#x8FDB;&#x4E4B;&#x540E;&#xFF0C;&#x5C45;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x4E0D;&#x53D7;&#x5143;&#x7D20;&#x7684;&#x5BBD;&#x9AD8;&#x6240;&#x5F71;&#x54CD;</p>
+<h2 id="&#x65B9;&#x6CD5;&#x4E09;-vertical-align"><a href="#&#x65B9;&#x6CD5;&#x4E09;-vertical-align" class="headerlink" title="&#x65B9;&#x6CD5;&#x4E09; vertical-align"></a>&#x65B9;&#x6CD5;&#x4E09; vertical-align</h2><p>&#x8FD9;&#x4E00;&#x65B9;&#x6CD5;&#x5E38;&#x9488;&#x5BF9;&#x56FE;&#x7247;&#x5C45;&#x4E2D;&#x4F7F;&#x7528;</p>
+<p> &#x521D;&#x59CB;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;thumb&quot;</span>&gt;</div><div class="line">    &lt;img src=&quot;&#x56FE;&#x7247;&#x94FE;&#x63A5;&quot; &gt;</div><div class="line">&lt;div&gt;</div></pre></td></tr></table></figure></p>
+<p> &#x7ED9;&#x76D2;&#x5B50;&#x8BBE;&#x7F6E;&#x597D;&#x6837;&#x5F0F;&#x4E4B;&#x540E;&#x5F00;&#x59CB;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;&#xFF0C;&#x5B9E;&#x73B0;&#x6C34;&#x5E73;&#x548C;&#x5782;&#x76F4;&#x7684;&#x5C45;&#x4E2D;</p>
 <ol>
-<li>父盒子添加text-align：center</li>
-<li><p>给img加一个兄弟元素span</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"thumb"</span>&gt;</div><div class="line">    &lt;img src="图片链接" &gt;</div><div class="line">    &lt;span&gt;&lt;/span&gt;</div><div class="line">&lt;div&gt;</div></pre></td></tr></table></figure>
+<li>&#x7236;&#x76D2;&#x5B50;&#x6DFB;&#x52A0;text-align&#xFF1A;center</li>
+<li><p>&#x7ED9;img&#x52A0;&#x4E00;&#x4E2A;&#x5144;&#x5F1F;&#x5143;&#x7D20;span</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;thumb&quot;</span>&gt;</div><div class="line">    &lt;img src=&quot;&#x56FE;&#x7247;&#x94FE;&#x63A5;&quot; &gt;</div><div class="line">    &lt;span&gt;&lt;/span&gt;</div><div class="line">&lt;div&gt;</div></pre></td></tr></table></figure>
 </li>
-<li><p>span样式设置：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.thumb span&#123;</div><div class="line">   display：inline-block；</div><div class="line">   height：<span class="number">100</span>%；</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><p>span&#x6837;&#x5F0F;&#x8BBE;&#x7F6E;&#xFF1A;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.thumb span{</div><div class="line">   display&#xFF1A;inline-block&#xFF1B;</div><div class="line">   height&#xFF1A;<span class="number">100</span>%&#xFF1B;</div><div class="line">}</div></pre></td></tr></table></figure>
 </li>
-<li><p>给img设置样式：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.thumb span&#123;</div><div class="line">   vertical-align:middle;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><p>&#x7ED9;img&#x8BBE;&#x7F6E;&#x6837;&#x5F0F;&#xFF1A;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.thumb span{</div><div class="line">   vertical-align:middle;</div><div class="line">}</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>此时无论怎样改变图片大小，图片一直是水平垂直居中的</p>
-<h5 id="原理解释：vertical-align，是相对于兄弟元素的中线做垂直对齐，只有img和外面的盒子的时候是无法让img居中的"><a href="#原理解释：vertical-align，是相对于兄弟元素的中线做垂直对齐，只有img和外面的盒子的时候是无法让img居中的" class="headerlink" title="原理解释：vertical-align，是相对于兄弟元素的中线做垂直对齐，只有img和外面的盒子的时候是无法让img居中的"></a>原理解释：vertical-align，是相对于兄弟元素的中线做垂直对齐，只有img和外面的盒子的时候是无法让img居中的</h5><h4 id="不想用span也可以用伪类代替"><a href="#不想用span也可以用伪类代替" class="headerlink" title="不想用span也可以用伪类代替"></a>不想用span也可以用伪类代替</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">.thumb:after&#123;</div><div class="line">    <span class="attr">content</span>:<span class="string">''</span>;</div><div class="line">    display:inline-block;</div><div class="line">    height:<span class="number">100</span>%;</div><div class="line">    vertical-align:middle;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="第四种：使用div模拟表格结构"><a href="#第四种：使用div模拟表格结构" class="headerlink" title="第四种：使用div模拟表格结构"></a>第四种：使用div模拟表格结构</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"table"</span>&gt;</div><div class="line">    &lt;div class="td"&gt;</div><div class="line">        &lt;img src="图片链接" alt=""&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-<p>在css设置中 给 <code>.table</code> 添加 <code>display:table</code>;<br>           给 <code>.td</code> 添加 <code>display:table-cell; vertical-align:middle;text-align:center</code></p>
+<p>&#x6B64;&#x65F6;&#x65E0;&#x8BBA;&#x600E;&#x6837;&#x6539;&#x53D8;&#x56FE;&#x7247;&#x5927;&#x5C0F;&#xFF0C;&#x56FE;&#x7247;&#x4E00;&#x76F4;&#x662F;&#x6C34;&#x5E73;&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x7684;</p>
+<h5 id="&#x539F;&#x7406;&#x89E3;&#x91CA;&#xFF1A;vertical-align&#xFF0C;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x5144;&#x5F1F;&#x5143;&#x7D20;&#x7684;&#x4E2D;&#x7EBF;&#x505A;&#x5782;&#x76F4;&#x5BF9;&#x9F50;&#xFF0C;&#x53EA;&#x6709;img&#x548C;&#x5916;&#x9762;&#x7684;&#x76D2;&#x5B50;&#x7684;&#x65F6;&#x5019;&#x662F;&#x65E0;&#x6CD5;&#x8BA9;img&#x5C45;&#x4E2D;&#x7684;"><a href="#&#x539F;&#x7406;&#x89E3;&#x91CA;&#xFF1A;vertical-align&#xFF0C;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x5144;&#x5F1F;&#x5143;&#x7D20;&#x7684;&#x4E2D;&#x7EBF;&#x505A;&#x5782;&#x76F4;&#x5BF9;&#x9F50;&#xFF0C;&#x53EA;&#x6709;img&#x548C;&#x5916;&#x9762;&#x7684;&#x76D2;&#x5B50;&#x7684;&#x65F6;&#x5019;&#x662F;&#x65E0;&#x6CD5;&#x8BA9;img&#x5C45;&#x4E2D;&#x7684;" class="headerlink" title="&#x539F;&#x7406;&#x89E3;&#x91CA;&#xFF1A;vertical-align&#xFF0C;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x5144;&#x5F1F;&#x5143;&#x7D20;&#x7684;&#x4E2D;&#x7EBF;&#x505A;&#x5782;&#x76F4;&#x5BF9;&#x9F50;&#xFF0C;&#x53EA;&#x6709;img&#x548C;&#x5916;&#x9762;&#x7684;&#x76D2;&#x5B50;&#x7684;&#x65F6;&#x5019;&#x662F;&#x65E0;&#x6CD5;&#x8BA9;img&#x5C45;&#x4E2D;&#x7684;"></a>&#x539F;&#x7406;&#x89E3;&#x91CA;&#xFF1A;vertical-align&#xFF0C;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x5144;&#x5F1F;&#x5143;&#x7D20;&#x7684;&#x4E2D;&#x7EBF;&#x505A;&#x5782;&#x76F4;&#x5BF9;&#x9F50;&#xFF0C;&#x53EA;&#x6709;img&#x548C;&#x5916;&#x9762;&#x7684;&#x76D2;&#x5B50;&#x7684;&#x65F6;&#x5019;&#x662F;&#x65E0;&#x6CD5;&#x8BA9;img&#x5C45;&#x4E2D;&#x7684;</h5><h4 id="&#x4E0D;&#x60F3;&#x7528;span&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4F2A;&#x7C7B;&#x4EE3;&#x66FF;"><a href="#&#x4E0D;&#x60F3;&#x7528;span&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4F2A;&#x7C7B;&#x4EE3;&#x66FF;" class="headerlink" title="&#x4E0D;&#x60F3;&#x7528;span&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4F2A;&#x7C7B;&#x4EE3;&#x66FF;"></a>&#x4E0D;&#x60F3;&#x7528;span&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4F2A;&#x7C7B;&#x4EE3;&#x66FF;</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">.thumb:after{</div><div class="line">    <span class="attr">content</span>:<span class="string">&apos;&apos;</span>;</div><div class="line">    display:inline-block;</div><div class="line">    height:<span class="number">100</span>%;</div><div class="line">    vertical-align:middle;</div><div class="line">}</div></pre></td></tr></table></figure>
+<h2 id="&#x7B2C;&#x56DB;&#x79CD;&#xFF1A;&#x4F7F;&#x7528;div&#x6A21;&#x62DF;&#x8868;&#x683C;&#x7ED3;&#x6784;"><a href="#&#x7B2C;&#x56DB;&#x79CD;&#xFF1A;&#x4F7F;&#x7528;div&#x6A21;&#x62DF;&#x8868;&#x683C;&#x7ED3;&#x6784;" class="headerlink" title="&#x7B2C;&#x56DB;&#x79CD;&#xFF1A;&#x4F7F;&#x7528;div&#x6A21;&#x62DF;&#x8868;&#x683C;&#x7ED3;&#x6784;"></a>&#x7B2C;&#x56DB;&#x79CD;&#xFF1A;&#x4F7F;&#x7528;div&#x6A21;&#x62DF;&#x8868;&#x683C;&#x7ED3;&#x6784;</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;table&quot;</span>&gt;</div><div class="line">    &lt;div class=&quot;td&quot;&gt;</div><div class="line">        &lt;img src=&quot;&#x56FE;&#x7247;&#x94FE;&#x63A5;&quot; alt=&quot;&quot;&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>&#x5728;css&#x8BBE;&#x7F6E;&#x4E2D; &#x7ED9; <code>.table</code> &#x6DFB;&#x52A0; <code>display:table</code>;<br>           &#x7ED9; <code>.td</code> &#x6DFB;&#x52A0; <code>display:table-cell; vertical-align:middle;text-align:center</code></p>
 
       
     </div>
@@ -466,7 +457,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
