@@ -1,0 +1,629 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="ECMAscript6," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="&amp;#x5757;&amp;#x7EA7;&amp;#x4F5C;&amp;#x7528;&amp;#x57DF; Let&amp;#x7528; let &amp;#x58F0;&amp;#x660E;&amp;#x4E00;&amp;#x4E2A;&amp;#x53D8;&amp;#x91CF;&amp;#xFF0C;&amp;#x90A3;&amp;#x4E48;&amp;#x8BE5;&amp;#x53D8;&amp;#x91CF;&amp;#x53EA;&amp;#x80FD;&amp;#x4F7F;&amp;#x7528;&amp;#x5728;&amp;#x5B9A">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6新功能">
+<meta property="og:url" content="http://yoursite.com/2017/01/16/es6/index.html">
+<meta property="og:site_name" content="jelly">
+<meta property="og:description" content="&amp;#x5757;&amp;#x7EA7;&amp;#x4F5C;&amp;#x7528;&amp;#x57DF; Let&amp;#x7528; let &amp;#x58F0;&amp;#x660E;&amp;#x4E00;&amp;#x4E2A;&amp;#x53D8;&amp;#x91CF;&amp;#xFF0C;&amp;#x90A3;&amp;#x4E48;&amp;#x8BE5;&amp;#x53D8;&amp;#x91CF;&amp;#x53EA;&amp;#x80FD;&amp;#x4F7F;&amp;#x7528;&amp;#x5728;&amp;#x5B9A">
+<meta property="og:updated_time" content="2017-01-16T14:00:36.006Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ES6新功能">
+<meta name="twitter:description" content="&amp;#x5757;&amp;#x7EA7;&amp;#x4F5C;&amp;#x7528;&amp;#x57DF; Let&amp;#x7528; let &amp;#x58F0;&amp;#x660E;&amp;#x4E00;&amp;#x4E2A;&amp;#x53D8;&amp;#x91CF;&amp;#xFF0C;&amp;#x90A3;&amp;#x4E48;&amp;#x8BE5;&amp;#x53D8;&amp;#x91CF;&amp;#x53EA;&amp;#x80FD;&amp;#x4F7F;&amp;#x7528;&amp;#x5728;&amp;#x5B9A">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/01/16/es6/"/>
+
+
+
+
+
+  <title> ES6新功能 | jelly </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">jelly</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-首页"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-归档"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-标签"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/16/es6/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Jelly">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="jelly">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="jelly" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ES6新功能
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-16T16:30:25+08:00">
+                2017-01-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;-Let"><a href="#&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;-Let" class="headerlink" title="&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF; Let"></a>&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF; Let</h2><h3 id="&#x7528;-let-&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x53D8;&#x91CF;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x5728;&#x5B9A;&#x4E49;&#x5B83;&#x7684;&#x5757;&#x91CC;&#x9762;&#x3002;"><a href="#&#x7528;-let-&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x53D8;&#x91CF;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x5728;&#x5B9A;&#x4E49;&#x5B83;&#x7684;&#x5757;&#x91CC;&#x9762;&#x3002;" class="headerlink" title="&#x7528; let &#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x53D8;&#x91CF;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x5728;&#x5B9A;&#x4E49;&#x5B83;&#x7684;&#x5757;&#x91CC;&#x9762;&#x3002;"></a>&#x7528; <code>let</code> &#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x53D8;&#x91CF;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x5728;&#x5B9A;&#x4E49;&#x5B83;&#x7684;&#x5757;&#x91CC;&#x9762;&#x3002;</h3><p>&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF1A;for&#x5FAA;&#x73AF;&#x7684;&#x8BA1;&#x6570;&#x5668;</p>
+<p>&#x5728;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#x5982;&#x679C;&#x4F7F;&#x7528;var&#xFF0C;&#x6700;&#x540E;&#x8F93;&#x51FA;&#x7684;&#x662F;10</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> a=[];</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++){</div><div class="line">    a[i]=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</div><div class="line">        <span class="built_in">console</span>.log(i);</div><div class="line">    };</div><div class="line">}</div><div class="line"></div><div class="line">a[<span class="number">6</span>](); <span class="comment">//10</span></div></pre></td></tr></table></figure>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528;let&#xFF0C;&#x6700;&#x540E;&#x8F93;&#x51FA;6</p>
+<h3 id="&#x4E0D;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x63D0;&#x5347;"><a href="#&#x4E0D;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x63D0;&#x5347;" class="headerlink" title="&#x4E0D;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x63D0;&#x5347;"></a>&#x4E0D;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x63D0;&#x5347;</h3><p>&#x5728;&#x4EE3;&#x7801;&#x5757;&#x5185;&#xFF0C;&#x4F7F;&#x7528;let&#x547D;&#x4EE4;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x4E4B;&#x524D;&#xFF0C;&#x8BE5;&#x53D8;&#x91CF;&#x90FD;&#x662F;&#x4E0D;&#x53EF;&#x7528;&#x7684;&#x3002;<br>&#x8FD9;&#x5728;&#x8BED;&#x6CD5;&#x4E0A;&#x79F0;&#x4E3A;&#x201C;&#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;&#x201D;&#xFF08;temporal dead zone&#xFF0C;&#x7B80;&#x79F0;TDZ&#xFF09;</p>
+<h3 id="&#x4E0D;&#x5141;&#x8BB8;&#x91CD;&#x590D;&#x58F0;&#x660E;"><a href="#&#x4E0D;&#x5141;&#x8BB8;&#x91CD;&#x590D;&#x58F0;&#x660E;" class="headerlink" title="&#x4E0D;&#x5141;&#x8BB8;&#x91CD;&#x590D;&#x58F0;&#x660E;"></a>&#x4E0D;&#x5141;&#x8BB8;&#x91CD;&#x590D;&#x58F0;&#x660E;</h3><p>let &#x4E0D;&#x5141;&#x8BB8;&#x5728;&#x76F8;&#x540C;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#xFF0C;&#x91CD;&#x590D;&#x58F0;&#x660E;&#x540C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x4E5F;&#x4E0D;&#x5141;&#x8BB8;&#x5728;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x91CD;&#x65B0;&#x58F0;&#x660E;&#x53C2;&#x6570;&#x3002;</p>
+<h3 id="&#x4F7F;&#x533F;&#x540D;&#x51FD;&#x6570;&#x4E0D;&#x518D;&#x5FC5;&#x8981;"><a href="#&#x4F7F;&#x533F;&#x540D;&#x51FD;&#x6570;&#x4E0D;&#x518D;&#x5FC5;&#x8981;" class="headerlink" title="&#x4F7F;&#x533F;&#x540D;&#x51FD;&#x6570;&#x4E0D;&#x518D;&#x5FC5;&#x8981;"></a>&#x4F7F;&#x533F;&#x540D;&#x51FD;&#x6570;&#x4E0D;&#x518D;&#x5FC5;&#x8981;</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//&#x533F;&#x540D;&#x51FD;&#x6570;</span></div><div class="line">&#xFF08;<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</div><div class="line">    <span class="keyword">var</span> temp = <span class="number">123</span>;</div><div class="line">    ...</div><div class="line">}()&#xFF09;;</div><div class="line"></div><div class="line"><span class="comment">// &#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;</span></div><div class="line"></div><div class="line">{</div><div class="line">    <span class="keyword">let</span> temp = <span class="number">123</span>;</div><div class="line">    ...</div><div class="line">}</div></pre></td></tr></table></figure>
+<h2 id="&#x8861;&#x91CF;-const"><a href="#&#x8861;&#x91CF;-const" class="headerlink" title="&#x8861;&#x91CF; const"></a>&#x8861;&#x91CF; const</h2><p><code>const</code>&#x4E5F;&#x7528;&#x6765;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#xFF0C;&#x4F46;&#x662F;&#x58F0;&#x660E;&#x7684;&#x662F;&#x5E38;&#x91CF;&#x3002;&#x4E00;&#x65E6;&#x58F0;&#x660E;&#xFF0C;&#x5E38;&#x91CF;&#x7684;&#x503C;&#x5C31;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x3002;</p>
+<p>&#x5BF9;&#x5E38;&#x91CF;&#x91CD;&#x65B0;&#x8D4B;&#x503C;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x53EA;&#x4F1A;&#x9ED8;&#x9ED8;&#x5931;&#x8D25;</p>
+<p>const&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x4E0E;let&#x547D;&#x4EE4;&#x76F8;&#x540C;&#xFF1A;&#x53EA;&#x5728;&#x58F0;&#x660E;&#x6240;&#x5728;&#x7684;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#x6709;&#x6548;&#x3002;</p>
+<p>const&#x547D;&#x4EE4;&#x4E5F;&#x4E0D;&#x5B58;&#x5728;&#x63D0;&#x5347;&#xFF0C;&#x53EA;&#x80FD;&#x5728;&#x751F;&#x547D;&#x7684;&#x4F4D;&#x7F6E;&#x540E;&#x9762;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x540C;&#x6837;&#x7684;&#xFF0C;const&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x58F0;&#x660E;&#x3002;</p>
+<h3 id="&#x5C06;&#x5BF9;&#x8C61;&#x58F0;&#x660E;&#x4E3A;&#x5E38;&#x91CF;"><a href="#&#x5C06;&#x5BF9;&#x8C61;&#x58F0;&#x660E;&#x4E3A;&#x5E38;&#x91CF;" class="headerlink" title="&#x5C06;&#x5BF9;&#x8C61;&#x58F0;&#x660E;&#x4E3A;&#x5E38;&#x91CF;"></a>&#x5C06;&#x5BF9;&#x8C61;&#x58F0;&#x660E;&#x4E3A;&#x5E38;&#x91CF;</h3><p>&#x7531;&#x4E8E;const&#x547D;&#x4EE4;&#x53EA;&#x662F;&#x6307;&#x5411;&#x53D8;&#x91CF;&#x6240;&#x5728;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x6240;&#x4EE5;&#x5C06;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x58F0;&#x660E;&#x4E3A;&#x5E38;&#x91CF;&#x5FC5;&#x987B;&#x975E;&#x5E38;&#x5C0F;&#x5FC3;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">const</span> foo = {};</div><div class="line">foo.prop = <span class="number">123</span>;</div><div class="line"></div><div class="line">foo.prop <span class="comment">// 123</span></div><div class="line"></div><div class="line">foo = {} <span class="comment">//&#x4E0D;&#x8D77;&#x4F5C;&#x7528;</span></div></pre></td></tr></table></figure>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5E38;&#x91CF;foo&#x5B58;&#x50A8;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#xFF0C;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x6307;&#x5411;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0D;&#x53EF;&#x53D8;&#x5F97;&#x53EA;&#x662F;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#xFF0C;<br>&#x5373;&#x4E0D;&#x80FD;&#x628A;foo&#x6307;&#x5411;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#xFF0C;&#x4F46;&#x5BF9;&#x8C61;&#x672C;&#x8EAB;&#x662F;&#x53EF;&#x53D8;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4F9D;&#x7136;&#x53EF;&#x4EE5;&#x4E3A;&#x5176;&#x6DFB;&#x52A0;&#x65B0;&#x5C5E;&#x6027;&#xFF1B;</p>
+<h3 id="&#x8DE8;&#x6A21;&#x5757;&#x5E38;&#x91CF;"><a href="#&#x8DE8;&#x6A21;&#x5757;&#x5E38;&#x91CF;" class="headerlink" title="&#x8DE8;&#x6A21;&#x5757;&#x5E38;&#x91CF;"></a>&#x8DE8;&#x6A21;&#x5757;&#x5E38;&#x91CF;</h3><p>&#x56E0;&#x4E3A;const&#x58F0;&#x660E;&#x7684;&#x5E38;&#x91CF;&#x53EA;&#x5728;&#x5F53;&#x524D;&#x4EE3;&#x7801;&#x5757;&#x6709;&#x6548;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8BBE;&#x7F6E;&#x8DE8;&#x6A21;&#x5757;&#x5E38;&#x91CF;&#xFF0C;&#x53EF;&#x5728;const&#x524D;&#x6DFB;&#x52A0; <code>export</code>;</p>
+<h3 id="&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;"><a href="#&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;" class="headerlink" title="&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;"></a>&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;</h3><p>&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x662F;&#x6700;&#x9876;&#x5C42;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x73AF;&#x5883;&#x6307;&#x7684;&#x662F;Windows&#x5BF9;&#x8C61;&#xFF0C;&#x5728;Node.js&#x6307;&#x7684;&#x662F;global&#x5BF9;&#x8C61;&#x3002;<br>&#x5728;JavaScript&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x90FD;&#x662F;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
+<p>ES6&#x89C4;&#x5B9A;&#xFF0C;var&#x547D;&#x4EE4;&#x548C;function&#x547D;&#x4EE4;&#x751F;&#x547D;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x5C5E;&#x4E8E;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF1B;<br>let&#x547D;&#x4EE4;&#x3001;const&#x547D;&#x4EE4;&#x3002;class&#x547D;&#x4EE4;&#x751F;&#x547D;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x5C5E;&#x4E8E;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
+<h2 id="&#x6570;&#x7EC4;&#x7684;&#x89E3;&#x6784;&#x8D4B;&#x503C;"><a href="#&#x6570;&#x7EC4;&#x7684;&#x89E3;&#x6784;&#x8D4B;&#x503C;" class="headerlink" title="&#x6570;&#x7EC4;&#x7684;&#x89E3;&#x6784;&#x8D4B;&#x503C;"></a>&#x6570;&#x7EC4;&#x7684;&#x89E3;&#x6784;&#x8D4B;&#x503C;</h2><p>ES6&#x5141;&#x8BB8;&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x6A21;&#x5F0F;&#xFF0C;&#x4ECE;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;&#x4E2D;&#x63D0;&#x53D6;&#x503C;&#xFF0C;&#x5BF9;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#xFF0C;&#x8FD9;&#x88AB;&#x79F0;&#x4E3A;&#x7ED3;&#x6784;&#x3002;</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ECMAscript6/" rel="tag"># ECMAscript6</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/03/js1/" rel="next" title="《JavaScript高级程序设计》 笔记 （第一章）">
+                <i class="fa fa-chevron-left"></i> 《JavaScript高级程序设计》 笔记 （第一章）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="Jelly" />
+          <p class="site-author-name" itemprop="name">Jelly</p>
+          <p class="site-description motion-element" itemprop="description">To The Happy Few</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#块级作用域-Let"><span class="nav-number">1.</span> <span class="nav-text">块级作用域 Let</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用-let-声明一个变量，那么该变量只能使用在定义它的块里面。"><span class="nav-number">1.1.</span> <span class="nav-text">用 let 声明一个变量，那么该变量只能使用在定义它的块里面。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不存在变量提升"><span class="nav-number">1.2.</span> <span class="nav-text">不存在变量提升</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不允许重复声明"><span class="nav-number">1.3.</span> <span class="nav-text">不允许重复声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使匿名函数不再必要"><span class="nav-number">1.4.</span> <span class="nav-text">使匿名函数不再必要</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#衡量-const"><span class="nav-number">2.</span> <span class="nav-text">衡量 const</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#将对象声明为常量"><span class="nav-number">2.1.</span> <span class="nav-text">将对象声明为常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#跨模块常量"><span class="nav-number">2.2.</span> <span class="nav-text">跨模块常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全局对象的属性"><span class="nav-number">2.3.</span> <span class="nav-text">全局对象的属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的解构赋值"><span class="nav-number">3.</span> <span class="nav-text">数组的解构赋值</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jelly</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
