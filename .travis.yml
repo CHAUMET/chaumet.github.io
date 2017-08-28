@@ -1,30 +1,28 @@
-<code class="language-yum hljs http">language: node_js
-node_js: stable
- 
-# S: Build Lifecycle
-install:
-  - npm install
- 
- 
-#before_script:
- # - npm install -g gulp
- 
-script:
-  - hexo g
- 
-after_script:
-  - cd ./public
-  - git init
-  - git config user.name "lifengsofts"
-  - git config user.email "lifengsofts@gmail.com"
-  - git add .
-  - git commit -m "Update docs"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
-# E: Build LifeCycle
- 
+language: node_js
+node_js:
+- '4'
 branches:
   only:
-    - source
-env:
- global:
-   - GH_REF: github.com/CHAUMET/chaumet.github.io.git
+  - travis
+cache:
+  directories:
+  - node_modules
+before_install:
+- openssl aes-256-cbc -K •••••••••••••••• -iv ••••••••••••••••
+  -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- cp .travis/ssh_config ~/.ssh/config
+- git config --global user.name "527515025"
+- git config --global user.email "527515025@qq.com"
+install:
+- npm install hexo-cli -g
+- npm install hexo-deployer-git --save
+- npm install
+script:
+- hexo clean
+- hexo g
+
+after_success:
+- hexo deploy
